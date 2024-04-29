@@ -3,12 +3,16 @@ package com.soria.academia2.serviceImpl;
 import com.soria.academia2.entity.Curso;
 import com.soria.academia2.repository.CursoRepository;
 import com.soria.academia2.service.CursoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class CursoServiceImpl implements CursoService {
 
+    @Autowired
     private CursoRepository curRepo;
 
 
@@ -37,7 +41,6 @@ public class CursoServiceImpl implements CursoService {
         object.setVacantes(curso.getVacantes());
         object.setPrecio(curso.getPrecio());
         object.setTipoCurso(curso.getTipoCurso());
-        object.setProfesores(curso.getProfesores());
         curRepo.save(object);
         }
 

@@ -5,12 +5,16 @@ import com.soria.academia2.entity.Transaccion;
 import com.soria.academia2.repository.CursoRepository;
 import com.soria.academia2.repository.TransaccionRepository;
 import com.soria.academia2.service.TransaccionService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TransaccionServiceImpl implements TransaccionService {
 
+    @Autowired
     private TransaccionRepository tranRepo;
 
     @Override

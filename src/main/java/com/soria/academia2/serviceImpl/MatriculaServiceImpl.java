@@ -3,12 +3,16 @@ package com.soria.academia2.serviceImpl;
 import com.soria.academia2.entity.Matricula;
 import com.soria.academia2.repository.MatriculaRepository;
 import com.soria.academia2.service.MatriculaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MatriculaServiceImpl implements MatriculaService {
 
+    @Autowired
     private MatriculaRepository matRepo;
 
     @Override
@@ -33,7 +37,7 @@ public class MatriculaServiceImpl implements MatriculaService {
         if (object != null) {
             object.setUsuario(matricula.getUsuario());
             object.setCurso(matricula.getCurso());
-            object.setFechama(matricula.getFechama());
+            object.setFechma(matricula.getFechma());
             object.setEstado(matricula.getEstado());
             object.setCostcurso(matricula.getCostcurso());
             matRepo.save(object);

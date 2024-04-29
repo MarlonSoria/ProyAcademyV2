@@ -4,12 +4,16 @@ import com.soria.academia2.entity.Transaccion;
 import com.soria.academia2.entity.Usuario;
 import com.soria.academia2.repository.UsuarioRepository;
 import com.soria.academia2.service.UsuarioService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class UsuarioServiceImpl implements UsuarioService {
 
+    @Autowired
     private UsuarioRepository usuRepo;
 
     @Override

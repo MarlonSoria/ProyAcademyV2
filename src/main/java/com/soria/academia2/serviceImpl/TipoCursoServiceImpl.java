@@ -4,12 +4,16 @@ import com.soria.academia2.entity.TipoCurso;
 import com.soria.academia2.repository.CursoRepository;
 import com.soria.academia2.repository.TipoCursoRepository;
 import com.soria.academia2.service.TipoCursoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TipoCursoServiceImpl implements TipoCursoService {
 
+    @Autowired
     private TipoCursoRepository tipocurRepo;
 
     @Override

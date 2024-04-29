@@ -28,8 +28,8 @@ public class Matricula {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
-    @Column(name = "fechama")
-    private Date fechama;
+    @Column(name = "fechma")
+    private Date fechma;
 
     @Column(name = "estado")
     private String estado;

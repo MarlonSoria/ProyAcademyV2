@@ -1,16 +1,19 @@
 package com.soria.academia2.serviceImpl;
 
-import com.soria.academia2.entity.Matricula;
+
 import com.soria.academia2.entity.Profesor;
-import com.soria.academia2.repository.MatriculaRepository;
 import com.soria.academia2.repository.ProfesorRepository;
 import com.soria.academia2.service.ProfesorService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ProfesorServiceImpl implements ProfesorService {
 
+    @Autowired
     private ProfesorRepository proRepo;
 
 

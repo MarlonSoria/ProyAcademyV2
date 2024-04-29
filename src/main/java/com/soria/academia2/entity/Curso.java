@@ -27,11 +27,9 @@ public class Curso {
     private Double precio;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "id_tipocurso", unique = true)
+    @JoinColumn(name = "id_tipocurso")
     private TipoCurso tipoCurso;
 
-    @OneToMany(mappedBy = "curso")
-    private List<Profesor> profesores;
 
 
 }
